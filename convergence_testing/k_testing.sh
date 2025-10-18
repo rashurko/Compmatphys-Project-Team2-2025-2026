@@ -13,5 +13,5 @@ cd $PBS_O_WORKDIR
 #load QE
 module load QuantumESPRESSO
 #run QE command
-mpirun -np $PBS_NP pw.x -input TiFe.in > TiFe_k_15_wfc_250_f_20.out
+mpirun -np $PBS_NP pw.x -input TiFe.in > TiFe_k_11_wfc_124_f_14.out
 
