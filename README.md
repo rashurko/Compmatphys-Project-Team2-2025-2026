@@ -27,6 +27,14 @@ The relaxed optimization was performed by varying the goal pressure P of a cryst
 
 Also here, data (1 point) deviates from the Birch-Murnaghan model. $V_0$ from both methods are almost identical, while $B_0$ and $B_1$ have changed quite a bit. The energy at equilibrium in the case of the relaxed optimization is higher.
 
+### Relaxed optimization k = 15
+![Relaxed_EV_k15](geometry_optimization/EV_relaxed_k15/figures/EV_relaxed_k15.png "Relaxed E(V) k=15")
+- $V_0 = 173.99 ~\text{a.u.}^3$
+- $B_0 = 192.6 ~\text{GPa}$
+- $B_1 = 4.21$
+- $E_0 = -448.58683 ~\text{GPa}$
+
+
 ## Full optimization
 The full optimization was performed with
 - press=0.d0
@@ -53,3 +61,29 @@ results in
 - $P = 99.70 ~\text{kbar}$
 
 There is almost no change in the parameters (with exception of $E_0$, which became higher). This is to be expected as the bulk modulus of TiFe is $165.5 ~\text{GPa}$ which is much higher than the applied pressure of $10 ~\text{GPa}$. From the Murnaghan equation, we can estimate that the pressure difference of $10 ~\text{GPa}$ would cause a decrease in volume of $0.060249$%.
+
+## Full optimization k = 15
+
+- press=0.d0
+- press_conv_thr=0.1d0 (0.1 kbar)
+
+The result of this optimization:
+- $V_0 = 171.2590 ~\text{a.u.}^3$
+- $A = a = 5.5533 ~\text{a.u.}$
+- $E_0 = -448.58682953 ~\text{Ry}$
+- $P = 0.09 ~\text{kbar}$ (with diagonal stress elements = 0.08)
+
+### $P = 100 ~\text{kbar}$
+
+- press=100.d0
+- press_conv_thr=0.1d0
+
+results in
+
+- $V_0 = 171.2590 ~\text{a.u.}^3$
+- $A = a = 5.5533 ~\text{a.u.}$
+- $E_0 =  -448.58415002 ~\text{Ry}$
+- $P = 99.75 ~\text{kbar}$
+
+Estimated pressure change from the Murnaghan equation: decrease of $0.052$%.
+
