@@ -16,6 +16,15 @@ The static optimization was performed by varying the lattice parameter $A \in [2
 
 On the figure, 3 data points can be seen which (significantly) deviate from the Birch-Murnaghan formula (not sure why, maybe some tuning in the input files is needed, or it's just a property of a crystal (TODO: test with other input parameters)).
 
+### Static optimization k = 15
+- $V_0 = 173.99 ~\text{a.u.}^3$
+- $B_0 = 192.7 ~\text{GPa}$
+- $B_1 = 4.20$
+- $E_0 = -448.58683 ~\text{Ry}$
+
+![Static_EV_k15](geometry_optimization/EV_static_k15/figures/EV_static_k15.png "Static E(V) k = 15")
+
+
 ### Relaxed optimization
 The relaxed optimization was performed by varying the goal pressure P of a crystal. $P \in [-261.95 ~\text{GPa}, 361.95 ~\text{GPa}]$ in steps of $\Delta P = 41.67 ~\text{GPa}$. Data, once more, was fitted to the Birch-Murnaghan formula, and produced:
 - $V_0 = 173.30 ~\text{a.u.}^3$
