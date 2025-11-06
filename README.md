@@ -96,3 +96,29 @@ results in
 
 Estimated pressure change from the Murnaghan equation: decrease of $0.052$%.
 
+## Step 3
+
+Bjorn: I ran a full geometry optimization for the following crystal structures: TiFe, TiFe2 (kubic), Tife2 (hexagonal), HfFe, HfFe2 (kubic), HfFe2 (hexagonal), Fe and Ni. 
+
+For the Fe, Ni, TiFe, TiFe2 (hexagonal), HfFe2 (cubic) and HfFe2 (hexagonal) structures cif files were available on the material project website, here was also listed wheter these materials had magnetic properties or not. Fe and Ni are ferromagnetic, while all the other structures that had magnetism were ferrimagnetic. From these cif files, geometric optimization was easily performed by contructing a appropriate input file for a vc-relax calculation. The initial magnetic moment for each atom type and site was taken from the material project page, better values were found for our pseudopotential and setup during the relaxation calculation. 
+
+An important remark for doing these calulations concerns the choice of the specific values for the calculation parameters we found in the first step. The values for ecutrho and ecutwfc could remain the same but the value for the k mesh changes for each unit cell. This value for k was optimized for the TiFe unit cell with cell parameter A = 2.93868, all other unit cells (not the pure matelic ones) have a bigger unit cell. When we increase the unit cell the first brillouin zone decreases so less k points are needed to achieve the same sampling in k space, the new k value in a certain direction then becomes: k' = round((k*A)/A') (e.g. increasing A by a factor 2 will decrease k by a factor of 2). This step is necessary for the calculation with the bigger unit cells otherwise the calculations are way too heavy.
+
+For the other structures no cif file is available on the material project website, but they can be reconstructed from the cif files from the other sturctures with the same symmetry and atomic positions. So we can just replace the type of atoms at certain atomic cites to get the input files for the new crystal. However then the cell parameter is completely wrong and we have no idea if this cell has magnetic properties. In order to get this information, we first perform a vc-relax calculation without any magnetism defined, this will get us a good first estimate of the cell parameter. With this new pareter we can run two scf calculation, one without magentism and one with mangetism (for which we can get a relativly good first estimate of the magnetic moments from the corresponding crystall structure that is on the material project page) we compare these outputs and if the magnetic scf caclulation converges to a net  magnetic moment and the energy is comparable to that of the non-magnetic scf caclulation we can conclude that this stucture has nog magnetic properties. This was the case for the HfFe structure. If the magnetic calculation does converge to a total magnetic moment, we can conclude that this sturctue does have magnetic properties. In both cases we then perform a full vc-relax calculation now with the correct magnetic properties defined, using the outputted magnetic moments as a new initial guess of the magnetic vc-relax calulation. 
+
+Doing the procedure for the stuctures listed above resulted in the following final parameters:
+
+| Compound        | Lattice parameter A (Å) | Magnetic character | starting_magnetization values (μ<sub>B</sub>) |
+|-----------------|--------------------------|--------------------|-----------------------------------------------|
+| **Fe**          | 2.833763778              | Ferromagnetic      | (1) = 2.2266                                 |
+| **Ni**          | 3.51698829               | Ferromagnetic      | (1) = 0.6956                                 |
+| **TiFe**        | 2.954090826              | Non-magnetic       | —                                             |
+| **TiFe₂ (cubic)** | 6.755434149            | Ferrimagnetic      | (1) = 1.7786 (Fe); (2) = –0.5591 (Ti)        |
+| **TiFe₂ (hexagonal)** | 4.775040937        | Ferrimagnetic      | (1) = 1.5362 (Fe₂); (2) = 1.7093 (Fe₆); (3) = –0.5036 (Ti) |
+| **HfFe**        | 3.14111794               | Non-magnetic       | —                                             |
+| **HfFe₂ (cubic)** | 6.995744408            | Ferrimagnetic      | (1) = 1.9377 (Fe); (2) = –0.3193 (Hf)        |
+| **HfFe₂ (hexagonal)** | 4.950603678        | Ferrimagnetic      | (1) = 1.8320 (Fe₂); (2) = 1.8586 (Fe₆); (3) = –0.3349 (Hf) |
+
+
+
+
