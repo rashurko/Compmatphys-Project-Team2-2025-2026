@@ -118,6 +118,9 @@ Doing the procedure for the stuctures listed above resulted in the following fin
 | **HfFe**        | 3.14111794               | Non-magnetic       | —                                             |
 | **HfFe₂ (cubic)** | 6.995744408            | Ferrimagnetic      | (1) = 1.9377 (Fe); (2) = –0.3193 (Hf)        |
 | **HfFe₂ (hexagonal)** | 4.950603678        | Ferrimagnetic      | (1) = 1.8320 (Fe₂); (2) = 1.8586 (Fe₆); (3) = –0.3349 (Hf) |
+| **TiNi**          | 3.0097930252             | Non-magnetic       | —                                            |
+| **TiNi₂ (cubic)**          | 6.7114000001             | Non-magnetic       | —                                            |
+| **TiNi₂ (hexagonal)**         | 4.7481984977             | Non-magnetic       | —                                            |
 
 
 
