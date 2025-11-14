@@ -13,4 +13,4 @@ cd $PBS_O_WORKDIR
 #load QE
 module load QuantumESPRESSO
 #run QE command
-mpirun -np $PBS_NP pw.x -input TiNi_vc_relax_nomag.in > TiNi_vc_relax_nomag.out
+mpirun -np $PBS_NP pw.x -input TiNi_vc_relax_mag.in > TiNi_vc_relax_mag.out
