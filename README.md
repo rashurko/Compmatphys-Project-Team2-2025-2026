@@ -123,5 +123,9 @@ Doing the procedure for the stuctures listed above resulted in the following fin
 | **TiNi₂ (hexagonal)**         | 4.7481984977             | Non-magnetic       | —                                            |
 
 
+From the available phase diagrams on Materials Project, we can conclude that the following structures are stable:
+- TiFe
+- TiFe$_2$ (cubic)
+- HfFe$_2$ (cubic)
 
 
