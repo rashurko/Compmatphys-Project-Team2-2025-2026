@@ -125,7 +125,7 @@ Doing the procedure for the stuctures listed above resulted in the following fin
 
 From the available phase diagrams on Materials Project, we can conclude that the following structures are stable:
 - TiFe
-- TiFe$_2$ (cubic)
-- HfFe$_2$ (cubic)
+- TiFe₂ (cubic)
+- HfFe₂ (cubic)
 
 
