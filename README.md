@@ -133,5 +133,28 @@ Bjorn: In this step we inserted H atoms into high symmetry positions inside the 
 
 The main conclusion is that the H atom prefers to occupie a position on the face of the original unit cell ((1/2, 1/2, 0) = 3c position) we therefore found it to be insightfull to also study the energy landscape of the face of the unit cell. For this a grid search type calculation was perfromed that did a scf caclulations where the H atom was put at different positions of a grid on the face of the original unit cell. (to keep the calculation time manageble a grid of 25x25 was chosen) the result was: 
 
+![energy plot 25](TiFe_hydrogen/face_grid_search/energy_plot/energy_plot_25.jpg "energy plot face grid search")
+
+Interestingly we notice that the energy minima is NOT the (0.5, 0.5, 0) position but there are rather 4 local minima symmetrically around the center, since this made not much sense i did some investigating, from what i can tell this is correct, however it is a result of the static scf caclulation. If the volume is fixed and the H atom is placed in the center the H atom is set in a local maxima of the energy, which is why we dont see it move if we do a relax calculation with H starting at (0.5,0.5,0): 
+
+"relax" calculation: TiFeH (0, 0.5, 0.5) -> (0, 0.5, 0.5) E = -449.7118933 Ry
+
+If we do a "relax" caclualtion with the the H atom placed at minima position we found with the grid search (which is (0.5, 0.416667, 0)) the atom indeed stays at that position (withing the resolution of the original grid): 
+
+"relax" calculation: TiFeH (0, 0.416667, 0.5) -> (0.5, 0.40251, 0.5) E = -449.71406946 Ry (the Fe atoms also moves up to (0.5, 0.52029, 0.5) and the Ti atom moves down slightly to (0.0, -0.0061, 0.0)
+
+So indeed this is a local minima in the energy. However when we now do a "vc-relac" calculation with the H atom starting in this positions we get the following change of positions: 
+
+"vc-remax" calculation: TiFeH (0, 0.416667, 0.5) ->
+Fe               0.5000000000        0.4722267123        0.5000000000
+Ti               0.0000000000       -0.0277794717        0.0000000000
+H                0.0000000000        0.4722194261        0.5000000000
+
+E = -449.75333069 Ry
+
+Which indeed is again a final position at (0, 0.5, 0.5) if we redefine the origin of the y-axis, pfew, ineed the local minima we found were artefacts of the fact that we constrained the volume. This is however still of note! 
+
+
+
 
 
