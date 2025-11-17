@@ -128,4 +128,10 @@ From the available phase diagrams on Materials Project, we can conclude that the
 - TiFe₂ (cubic)
 - HfFe₂ (cubic)
 
+## Step 4
+Bjorn: In this step we inserted H atoms into high symmetry positions inside the TiFe basis crystal structure and calculated the formation energy (rescaled per inserted H atom) to see which final structure would occur spontaneously. Details about which positions where tested can be found in the corresponding excel file. It is also imported to not forget the increase of the volume of the unit cell, for certain high symmetry positions multiple H atoms could be insterted per formula unit of TiFe, which resulted in a lower total energy and someetimes a lower energy per H atom, but this came at a cost of a hugely increased volume, which is of course also not desirable in the contect of solid state H batteries. 
+
+The main conclusion is that the H atom prefers to occupie a position on the face of the original unit cell ((1/2, 1/2, 0) = 3c position) we therefore found it to be insightfull to also study the energy landscape of the face of the unit cell. For this a grid search type calculation was perfromed that did a scf caclulations where the H atom was put at different positions of a grid on the face of the original unit cell. (to keep the calculation time manageble a grid of 25x25 was chosen) the result was: 
+
+
 
