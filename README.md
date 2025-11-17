@@ -145,12 +145,15 @@ If we do a "relax" caclualtion with the the H atom placed at minima position we 
 
 So indeed this is a local minima in the energy. However when we now do a "vc-relac" calculation with the H atom starting in this positions we get the following change of positions: 
 
+
 "vc-remax" calculation: TiFeH (0, 0.416667, 0.5) ->
+```text
 Fe               0.5000000000        0.4722267123        0.5000000000
 Ti               0.0000000000       -0.0277794717        0.0000000000
 H                0.0000000000        0.4722194261        0.5000000000
-
+```
 E = -449.75333069 Ry
+
 
 Which indeed is again a final position at (0, 0.5, 0.5) if we redefine the origin of the y-axis, pfew, ineed the local minima we found were artefacts of the fact that we constrained the volume. This is however still of note! 
 
