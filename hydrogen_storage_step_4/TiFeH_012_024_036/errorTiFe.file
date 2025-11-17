@@ -1,0 +1,5 @@
+--------------------------------------------------------------------------
+prterun noticed that process rank 0 with PID 1115493 on node node3512 exited on
+signal 9 (Killed).
+--------------------------------------------------------------------------
+slurmstepd: error: Detected 1 oom_kill event in StepId=59942896.batch. Some of the step tasks have been OOM Killed.
