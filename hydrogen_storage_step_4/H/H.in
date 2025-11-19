@@ -29,6 +29,8 @@
   occupations='smearing',
   smearing='mv',
   degauss=0.005d0,
+  nspin = 2,
+  starting_magnetization(1) = 1,
 /
 
 &ELECTRONS
@@ -54,7 +56,7 @@ CELL_PARAMETERS {alat}
   0.500000000000000  -0.500000000000000   0.500000000000000 
   0.500000000000000   0.500000000000000  -0.500000000000000 
 ATOMIC_SPECIES
-   H    1.00750   H.pbe-kjpaw_psl.1.0.0.UPF
+   H    1.00750   H.pbe-rrkjus_psl.1.0.0.UPF
 ATOMIC_POSITIONS {crystal}
 H   0.000000000000000   0.000000000000000   0.000000000000000 
 
