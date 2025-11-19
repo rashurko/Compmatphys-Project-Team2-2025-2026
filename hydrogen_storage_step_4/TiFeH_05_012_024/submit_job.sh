@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #
 #
-#PBS -N TiFe24l
+#PBS -N TiFeH24l
 #PBS -o output_TiFeH24l.file
 #PBS -e errorTiFeH24l.file
 #PBS -l walltime=5:00:00
@@ -13,4 +13,4 @@ cd $PBS_O_WORKDIR
 #load QE
 module load QuantumESPRESSO
 #run QE command
-mpirun -np $PBS_NP pw.x -input TiFeH.in > TiFeH_24l.out
+mpirun -np $PBS_NP pw.x -input TiFeH.in > TiFeH_24l_newpot.out
