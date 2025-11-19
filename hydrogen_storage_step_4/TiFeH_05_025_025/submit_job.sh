@@ -13,4 +13,4 @@ cd $PBS_O_WORKDIR
 #load QE
 module load QuantumESPRESSO
 #run QE command
-mpirun -np $PBS_NP pw.x -input TiFeH.in > TiFeH_12j.out
+mpirun -np $PBS_NP pw.x -input TiFeH.in > TiFeH_12j_newpot.out

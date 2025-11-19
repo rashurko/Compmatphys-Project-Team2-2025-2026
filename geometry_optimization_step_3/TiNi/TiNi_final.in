@@ -10,7 +10,7 @@
 &CONTROL
   calculation='vc-relax',
   outdir='.',
-  prefix='TiFeH',
+  prefix='TiFe',
   pseudo_dir = '../../pseudos',
   verbosity='low',
   tprnfor=.true.,
@@ -21,12 +21,11 @@
 
 &SYSTEM
   ibrav = 0,
-  A =    2.954090826,
-  nat = 3,
-  ntyp = 3,
+  A =    3.0124458283,
+  nat = 2,
+  ntyp = 2,
   ecutwfc=124,
   ecutrho=1736,
-  nosym = .true., 
   input_dft='pbe',
   occupations='smearing',
   smearing='mv',
@@ -53,13 +52,11 @@ CELL_PARAMETERS {alat}
   0.000000000000000   1.000000000000000   0.000000000000000 
   0.000000000000000   0.000000000000000   1.000000000000000 
 ATOMIC_SPECIES
-  Fe   55.84500  Fe.pbe-spn-kjpaw_psl.0.2.1.UPF
+  Ni   58.69300  ni_pbe_v1.4.uspp.F.UPF
   Ti   47.86700  ti_pbe_v1.4.uspp.F.UPF
-  H    1.00784   H.pbe-rrkjus_psl.1.0.0.UPF
 ATOMIC_POSITIONS {crystal}
-Fe   0.500000000000000   0.500000000000000   0.500000000000000 
+Ni   0.500000000000000   0.500000000000000   0.500000000000000 
 Ti   0.000000000000000   0.000000000000000   0.000000000000000 
-H    0.250000000000000   0.250000000000000   0.250000000000000
 
 K_POINTS {automatic}
  15 15 15 0 0 0
