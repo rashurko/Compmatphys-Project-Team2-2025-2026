@@ -157,6 +157,10 @@ E = -449.75333069 Ry
 
 Which indeed is again a final position at (0, 0.5, 0.5) if we redefine the origin of the y-axis, pfew, ineed the local minima we found were artefacts of the fact that we constrained the volume. This is however still of note! 
 
+I have now reran the grid search with the bigger volume we found when we did a vc-relax calculation with the H atom in the (0.5,0.5,0- position and now the energy minima is indeed nicely in the center. 
+
+![energy plot big V](TiFe_hydrogen/face_grid_search/energy_plot/Energy_plot_big_V.jpg "energy plot face grid search")
+
 
 
 
