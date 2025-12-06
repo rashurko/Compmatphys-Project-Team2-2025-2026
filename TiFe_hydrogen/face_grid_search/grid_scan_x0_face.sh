@@ -5,7 +5,7 @@
 
 BASE_INPUT="TiFe_H_faces_x.in"
 RESULT_FILE="energy_map.dat"
-GRID_POINTS=31          # number of grid divisions along y and z
+GRID_POINTS=25          # number of grid divisions along y and z
 FIXED_X=0.0             # H atom constrained to x = 0 face
 TMP_INPUT="scan_tmp.in"
 TMP_OUTPUT="scan_tmp.out"

@@ -1,0 +1,252 @@
+
+     Program PWSCF v.7.4 starts on 20Nov2025 at  1:16: 1 
+
+     This program is part of the open-source Quantum ESPRESSO suite
+     for quantum simulation of materials; please cite
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 21 395502 (2009);
+         "P. Giannozzi et al., J. Phys.:Condens. Matter 29 465901 (2017);
+         "P. Giannozzi et al., J. Chem. Phys. 152 154105 (2020);
+          URL http://www.quantum-espresso.org", 
+     in publications or presentations arising from this work. More details at
+     http://www.quantum-espresso.org/quote
+
+     Parallel version (MPI & OpenMP), running on      16 processor cores
+     Number of MPI processes:                16
+     Threads/MPI process:                     1
+
+     MPI processes distributed on     1 nodes
+     222702 MiB available memory on the printing compute node when the environment starts
+
+     Reading input from TiFe2H_cub_symm_32e_16H_inner.in
+Warning: card / ignored
+Warning: card  H   0.845000000000000   0.655000000000000   0.345000000000000 ignored
+Warning: card  H   0.655000000000000   0.845000000000000   0.345000000000000 ignored
+Warning: card  H   0.655000000000000   0.655000000000000   0.155000000000000 ignored
+Warning: card  H   0.845000000000000   0.845000000000000   0.155000000000000 ignored
+Warning: card  H   0.155000000000000   0.845000000000000   0.845000000000000 ignored
+Warning: card  H   0.155000000000000   0.655000000000000   0.655000000000000 ignored
+Warning: card  H   0.345000000000000   0.845000000000000   0.655000000000000 ignored
+Warning: card  H   0.345000000000000   0.655000000000000   0.845000000000000 ignored
+
+     Current dimensions of program PWSCF are:
+     Max number of different atomic species (ntypx) = 10
+     Max number of k-points (npk) =  40000
+     Max angular momentum in pseudopotentials (lmaxx) =  4
+     file Fe.pbe-spn-kjpaw_psl.0.2.1.UPF: wavefunction(s)  3D renormalized
+
+     IMPORTANT: XC functional enforced from input :
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     Any further DFT definition will be discarded
+     Please, verify this is what you really want
+
+     Found identity + ( -0.5000  0.0000  0.5000) symmetry
+     This is a supercell, fractional translations are disabled
+     Message from routine setup:
+     using ibrav=0 with symmetry is DISCOURAGED, use correct ibrav instead
+
+     R & G space division:  proc/nbgrp/npool/nimage =      16
+     Subspace diagonalization in iterative solution of the eigenvalue problem:
+     one sub-group per band group will be used
+     ELPA distributed-memory algorithm (size of sub-group:  2*  2 procs)
+
+
+     Parallelization info
+     --------------------
+     sticks:   dense  smooth     PW     G-vecs:    dense   smooth      PW
+     Min        1407     402    106               158861    24246    3306
+     Max        1408     403    107               158864    24249    3309
+     Sum       22525    6433   1701              2541805   387947   52923
+
+     Using Slab Decomposition
+
+
+
+     bravais-lattice index     =            0
+     lattice parameter (alat)  =      12.7659  a.u.
+     unit-cell volume          =    2080.4419 (a.u.)^3
+     number of atoms/cell      =           32
+     number of atomic types    =            3
+     number of electrons       =       360.00
+     number of Kohn-Sham states=          216
+     kinetic-energy cutoff     =     124.0000  Ry
+     charge density cutoff     =    1736.0000  Ry
+     scf convergence threshold =      1.0E-08
+     mixing beta               =       0.2000
+     number of iterations used =            8  local-TF  mixing
+     energy convergence thresh.=      1.0E-04
+     force convergence thresh. =      1.0E-03
+     press convergence thresh. =      1.0E-01
+     Exchange-correlation= PBE
+                           (   1   4   3   4   0   0   0)
+     nstep                     =           50
+
+
+     celldm(1)=  12.765913  celldm(2)=   0.000000  celldm(3)=   0.000000
+     celldm(4)=   0.000000  celldm(5)=   0.000000  celldm(6)=   0.000000
+
+     crystal axes: (cart. coord. in units of alat)
+               a(1) = (   1.000000   0.000000   0.000000 )  
+               a(2) = (   0.000000   1.000000   0.000000 )  
+               a(3) = (   0.000000   0.000000   1.000000 )  
+
+     reciprocal axes: (cart. coord. in units 2 pi/alat)
+               b(1) = (  1.000000  0.000000  0.000000 )  
+               b(2) = (  0.000000  1.000000  0.000000 )  
+               b(3) = (  0.000000  0.000000  1.000000 )  
+
+
+     PseudoPot. # 1 for Fe read from file:
+     ../../pseudos/Fe.pbe-spn-kjpaw_psl.0.2.1.UPF
+     MD5 check sum: e86618425769142926afa95317d90200
+     Pseudo is Projector augmented-wave + core cor, Zval = 16.0
+     Generated using "atomic" code by A. Dal Corso  v.5.0.99 svn rev. 10869
+     Shape of augmentation charge: PSQ
+     Using radial grid of 1191 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with 0 coefficients 
+
+
+     PseudoPot. # 2 for Ti read from file:
+     ../../pseudos/ti_pbe_v1.4.uspp.F.UPF
+     MD5 check sum: 88a00a6731bd790ddea75d31a80cb452
+     Pseudo is Ultrasoft + core correction, Zval = 12.0
+     Generated by new atomic code, or converted to UPF format
+     Using radial grid of  851 points,  6 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+                l(3) =   1
+                l(4) =   1
+                l(5) =   2
+                l(6) =   2
+     Q(r) pseudized with  6 coefficients,  rinner =    1.000   1.000   1.000
+                                                       1.000   1.000
+
+     PseudoPot. # 3 for H  read from file:
+     ../../pseudos/H.pbe-rrkjus_psl.1.0.0.UPF
+     MD5 check sum: f52b6d4d1c606e5624b1dc7b2218f220
+     Pseudo is Ultrasoft, Zval =  1.0
+     Generated using "atomic" code by A. Dal Corso  v.5.1
+     Using radial grid of  929 points,  2 beta functions with: 
+                l(1) =   0
+                l(2) =   0
+     Q(r) pseudized with 0 coefficients 
+
+
+     atomic species   valence    mass     pseudopotential
+     Fe               16.00    55.84500     Fe( 1.00)
+     Ti               12.00    47.86700     Ti( 1.00)
+     H                 1.00     1.00750     H ( 1.00)
+
+     Starting magnetic structure 
+     atomic species   magnetization
+     Fe              0.111
+     Ti             -0.047
+     H               0.000
+
+      4 Sym. Ops. (no inversion) found
+
+
+
+   Cartesian axes
+
+     site n.     atom                  positions (alat units)
+         1        Fe     tau(   1) = (   0.1250000   0.1250000   0.6250000  )
+         2        Fe     tau(   2) = (   0.6250000   0.6250000   0.6250000  )
+         3        Fe     tau(   3) = (   0.8750000   0.6250000   0.8750000  )
+         4        Fe     tau(   4) = (   0.3750000   0.8750000   0.1250000  )
+         5        Fe     tau(   5) = (   0.1250000   0.6250000   0.1250000  )
+         6        Fe     tau(   6) = (   0.6250000   0.1250000   0.1250000  )
+         7        Fe     tau(   7) = (   0.8750000   0.3750000   0.1250000  )
+         8        Fe     tau(   8) = (   0.3750000   0.6250000   0.3750000  )
+         9        Fe     tau(   9) = (   0.6250000   0.3750000   0.3750000  )
+        10        Fe     tau(  10) = (   0.6250000   0.8750000   0.8750000  )
+        11        Fe     tau(  11) = (   0.3750000   0.1250000   0.8750000  )
+        12        Fe     tau(  12) = (   0.8750000   0.8750000   0.6250000  )
+        13        Fe     tau(  13) = (   0.3750000   0.3750000   0.6250000  )
+        14        Fe     tau(  14) = (   0.8750000   0.1250000   0.3750000  )
+        15        Fe     tau(  15) = (   0.1250000   0.3750000   0.8750000  )
+        16        Fe     tau(  16) = (   0.1250000   0.8750000   0.3750000  )
+        17        Ti     tau(  17) = (   0.0000000   0.0000000   0.0000000  )
+        18        Ti     tau(  18) = (   0.7500000   0.7500000   0.2500000  )
+        19        Ti     tau(  19) = (   0.5000000   0.0000000   0.5000000  )
+        20        Ti     tau(  20) = (   0.7500000   0.2500000   0.7500000  )
+        21        Ti     tau(  21) = (   0.0000000   0.5000000   0.5000000  )
+        22        Ti     tau(  22) = (   0.2500000   0.2500000   0.2500000  )
+        23        Ti     tau(  23) = (   0.2500000   0.7500000   0.7500000  )
+        24        Ti     tau(  24) = (   0.5000000   0.5000000   0.0000000  )
+        25        H      tau(  25) = (   0.1550000   0.1550000   0.1550000  )
+        26        H      tau(  26) = (   0.3450000   0.3450000   0.1550000  )
+        27        H      tau(  27) = (   0.3450000   0.1550000   0.3450000  )
+        28        H      tau(  28) = (   0.1550000   0.3450000   0.3450000  )
+        29        H      tau(  29) = (   0.6550000   0.3450000   0.8450000  )
+        30        H      tau(  30) = (   0.8450000   0.1550000   0.8450000  )
+        31        H      tau(  31) = (   0.6550000   0.1550000   0.6550000  )
+        32        H      tau(  32) = (   0.8450000   0.3450000   0.6550000  )
+
+     number of k points=    27  Marzari-Vanderbilt smearing, width (Ry)=  0.0050
+                       cart. coord. in units 2pi/alat
+        k(    1) = (   0.0000000   0.0000000   0.0000000), wk =   0.0080000
+        k(    2) = (   0.0000000   0.0000000   0.2000000), wk =   0.0320000
+        k(    3) = (   0.0000000   0.0000000   0.4000000), wk =   0.0320000
+        k(    4) = (   0.0000000   0.2000000   0.2000000), wk =   0.0640000
+        k(    5) = (   0.0000000   0.2000000   0.4000000), wk =   0.0640000
+        k(    6) = (   0.0000000   0.4000000   0.4000000), wk =   0.0640000
+        k(    7) = (   0.2000000   0.2000000   0.2000000), wk =   0.0320000
+        k(    8) = (   0.2000000   0.2000000   0.4000000), wk =   0.0640000
+        k(    9) = (   0.2000000   0.4000000   0.4000000), wk =   0.0640000
+        k(   10) = (   0.4000000   0.4000000   0.4000000), wk =   0.0320000
+        k(   11) = (   0.0000000   0.2000000   0.0000000), wk =   0.0160000
+        k(   12) = (   0.0000000   0.4000000   0.0000000), wk =   0.0160000
+        k(   13) = (   0.2000000   0.0000000  -0.2000000), wk =   0.0160000
+        k(   14) = (  -0.2000000   0.0000000  -0.2000000), wk =   0.0160000
+        k(   15) = (   0.2000000   0.0000000  -0.4000000), wk =   0.0320000
+        k(   16) = (  -0.2000000   0.0000000  -0.4000000), wk =   0.0320000
+        k(   17) = (   0.0000000   0.4000000   0.2000000), wk =   0.0640000
+        k(   18) = (   0.4000000   0.0000000  -0.4000000), wk =   0.0160000
+        k(   19) = (  -0.4000000   0.0000000  -0.4000000), wk =   0.0160000
+        k(   20) = (   0.2000000   0.2000000  -0.2000000), wk =   0.0320000
+        k(   21) = (   0.2000000   0.2000000  -0.4000000), wk =   0.0640000
+        k(   22) = (  -0.2000000   0.4000000   0.2000000), wk =   0.0320000
+        k(   23) = (  -0.2000000  -0.4000000  -0.2000000), wk =   0.0320000
+        k(   24) = (   0.4000000   0.2000000  -0.4000000), wk =   0.0320000
+        k(   25) = (  -0.4000000  -0.2000000  -0.4000000), wk =   0.0320000
+        k(   26) = (   0.4000000   0.4000000  -0.2000000), wk =   0.0640000
+        k(   27) = (   0.4000000   0.4000000  -0.4000000), wk =   0.0320000
+
+     Dense  grid:  2541805 G-vectors     FFT dimensions: ( 180, 180, 180)
+
+     Smooth grid:   387947 G-vectors     FFT dimensions: (  96,  96,  96)
+
+     Estimated max dynamical RAM per process >       1.29 GB
+
+     Estimated total dynamical RAM >      20.62 GB
+
+     Check: negative core charge=   -0.000002
+     Generating pointlists ...
+     new r_m :   0.1458 (alat units)  1.8618 (a.u.) for type    1
+     new r_m :   0.0679 (alat units)  0.8665 (a.u.) for type    2
+     new r_m :   0.0679 (alat units)  0.8665 (a.u.) for type    3
+
+     Initial potential from superposition of free atoms
+
+     starting charge     351.9926, renormalised to     360.0000
+
+     negative rho (up, down):  4.682E-03 5.224E-03
+     Starting wfcs are  296 randomized atomic wfcs
+     Checking if some PAW data can be deallocated... 
+
+     total cpu time spent up to now is      118.3 secs
+
+     per-process dynamical memory:   840.4 Mb
+
+     Self-consistent Calculation
+
+     iteration #  1     ecut=   124.00 Ry     beta= 0.20
+     CG style diagonalization
+     ethr =  1.00E-02,  avg # of iterations =  2.6

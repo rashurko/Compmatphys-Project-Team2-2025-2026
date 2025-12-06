@@ -1,0 +1,40 @@
+&CONTROL
+  calculation='relax',
+  outdir='.',
+  prefix='H2_box',
+  pseudo_dir = '../../pseudos',
+  verbosity='low',
+  tprnfor=.true.,
+  tstress=.true.,
+  wfcdir='/tmp',
+  disk_io='minimal',
+/
+
+&SYSTEM
+  ibrav = 0,
+  nat = 2,
+  ntyp = 1,
+  ecutwfc = 124.0,
+  ecutrho = 1736.0,
+  input_dft = 'PBE',
+  occupations = 'fixed',
+  nspin = 1,
+/
+&ELECTRONS
+  conv_thr = 1.0d-8,
+  mixing_beta = 0.7,
+/
+&IONS
+  ion_dynamics = 'bfgs',
+/
+CELL_PARAMETERS angstrom
+ 20.000000   0.000000   0.000000
+  0.000000  20.000000   0.000000
+  0.000000   0.000000  20.000000
+ATOMIC_SPECIES
+ H  1.00794  H.pbe-rrkjus_psl.1.0.0.UPF
+ATOMIC_POSITIONS angstrom
+ H  7.5000  7.5000  9.62905
+ H  7.5000  7.5000  10.37095
+K_POINTS automatic
+ 1 1 1 0 0 0
