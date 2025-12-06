@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+#
+#
+#PBS -N o2_05_1
+#PBS -o output_o2_05_1.file
+#PBS -e erroro2_05_1.file
+#PBS -l walltime=48:00:00
+#PBS -l nodes=1:ppn=16
+#PBS -l mem=32gb
+#
+# change to directory you were working when submitting job
+cd $PBS_O_WORKDIR
+#load QE
+module load QuantumESPRESSO
+#run QE command
+mpirun -np $PBS_NP pw.x -input TiFe_octa2_05_1.in > TiFe_octa2_05_1.out
